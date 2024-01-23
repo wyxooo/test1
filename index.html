@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <h1>Kalkulačka</h1>
+  <input type="text" id="display" onkeydown="handleKeyPress(event)" autofocus placeholder="Zadej číslo">
+  <div>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button onclick="appendToDisplay('+')">+</button>
+  </div>
+  <div>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="appendToDisplay('-')">-</button>
+  </div>
+  <div>
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="appendToDisplay('*')">*</button>
+  </div>
+  <div>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendToDisplay('/')">/</button>
+    <button onclick="calculateSqrt()">√</button>
+    <button onclick="calculatePower()">^</button>
+
+
+  </div>
+
+  <p>
+    <button id="rdm" type="button" onclick="myFunction()"> Klikni sem pro vygenerování náhodného slova!</button>
+  </p>
+  <h1><u>Výpočty s konstantami</u></h1>
+
+  <button onclick="plocha()">Spočítat plochu</button>
+  <p> První hodnota poloměru: <input type="number" id="polomer1"></p>
+  <p>Druhá hodnota poloměru: <input type="number" id="polomer2"></p>
+
+  <p>Výsledek pro poloměr 1: <span id="vysledekpolomer1"></span></p>
+  <p>Výsledek pro poloměr 2: <span id="vysledekpolomer2"></span></p>
+
+
+
+  <h1>Výpočet obvodu čtverce</h1>
+  <label for="strana">Zadej stranu čtverce:</label>
+  <input type="number" id="strana">
+  <button onclick="vypocetObvodu()">Vypočítat</button>
+  <p id="vysledek"></p>
+
+  
+  
+  <h1>Aritmetický průměr</h1>
+
+  <p> Zadej čísla pro výpočet průměru: <input type="text" id="cisla" placeholder="Zadej čísla oddělená čárkou"></p>
+  <button onclick="ARprumer()">Spočítat průměr</button>
+  <p>Výsledek: <span id="averageResult"></span></p>
+
+
+
+
+
+  <script src="script.js"></script>
+
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
